@@ -1,0 +1,12 @@
+E:\Dev\SentenceParser\Infrastructure\bin\Debug\netstandard2.1\Infrastructure.deps.json
+E:\Dev\SentenceParser\Infrastructure\bin\Debug\netstandard2.1\Infrastructure.dll
+E:\Dev\SentenceParser\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.AssemblyInfoInputs.cache
+E:\Dev\SentenceParser\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.AssemblyInfo.cs
+E:\Dev\SentenceParser\Infrastructure\bin\Debug\netstandard2.1\Infrastructure.pdb
+E:\Dev\SentenceParser\Infrastructure\bin\Debug\netstandard2.1\Domain.dll
+E:\Dev\SentenceParser\Infrastructure\bin\Debug\netstandard2.1\Domain.pdb
+E:\Dev\SentenceParser\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.csprojAssemblyReference.cache
+E:\Dev\SentenceParser\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.csproj.CoreCompileInputs.cache
+E:\Dev\SentenceParser\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.csproj.CopyComplete
+E:\Dev\SentenceParser\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.dll
+E:\Dev\SentenceParser\Infrastructure\obj\Debug\netstandard2.1\Infrastructure.pdb

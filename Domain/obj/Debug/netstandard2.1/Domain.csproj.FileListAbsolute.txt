@@ -1,0 +1,9 @@
+E:\Dev\SentenceParser\Domain\bin\Debug\netstandard2.1\Domain.deps.json
+E:\Dev\SentenceParser\Domain\bin\Debug\netstandard2.1\Domain.dll
+E:\Dev\SentenceParser\Domain\bin\Debug\netstandard2.1\Domain.pdb
+E:\Dev\SentenceParser\Domain\obj\Debug\netstandard2.1\Domain.csprojAssemblyReference.cache
+E:\Dev\SentenceParser\Domain\obj\Debug\netstandard2.1\Domain.AssemblyInfoInputs.cache
+E:\Dev\SentenceParser\Domain\obj\Debug\netstandard2.1\Domain.AssemblyInfo.cs
+E:\Dev\SentenceParser\Domain\obj\Debug\netstandard2.1\Domain.csproj.CoreCompileInputs.cache
+E:\Dev\SentenceParser\Domain\obj\Debug\netstandard2.1\Domain.dll
+E:\Dev\SentenceParser\Domain\obj\Debug\netstandard2.1\Domain.pdb
