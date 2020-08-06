@@ -6,7 +6,7 @@ namespace API.Models
 {
     public class SentenceDto : IMapFrom<Sentence>
     {
-        public string Value;
+        public string Value { get; set; }
 
         public void Mapping(Profile profile)
         {

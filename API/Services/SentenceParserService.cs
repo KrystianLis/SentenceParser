@@ -5,8 +5,12 @@ using Domain.Interfaces;
 using Domain.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace API.Services
 {
@@ -28,35 +32,89 @@ namespace API.Services
             return sentence.Id;
         }
 
-        public async Task<SentenceToWordsDto> GetWordsAsync(int id)
+        public async Task<string> CreateXmlAsync(int id)
         {
-            var sentence = await _repo.GetAsync(id);
+            var sentenceModel = await _repo.GetAsync(id);
 
-            if(sentence is null)
+            if(sentenceModel is null)
             {
                 throw new ArgumentNullException();
             }
 
-            var words = await Task.Run(() => GetWordsFromText(sentence.Value));
+            var sentences = await Task.Run(() => GetWordsFromText(sentenceModel.Value));
 
-            return new SentenceToWordsDto
-            {
-                Words = words,
-            };
+            var doc = new XDocument(
+                    new XDeclaration("1.0", "UTF-8", "yes"));
+
+            var words = new XElement("text",
+
+                from sentence in sentences
+                select new XElement("sentence",
+                    from word in sentence.Words
+                    select new XElement("word", word)
+                ));
+
+            doc.Add(words);
+            var wr = new StringWriter();
+            doc.Save(wr);
+
+            return wr.ToString();
         }
 
-        private string[] GetWordsFromText(string input)
+        public async Task<string> CreateCsvAsync(int id)
+        {
+            var sentenceModel = await _repo.GetAsync(id);
+
+            if (sentenceModel is null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            var sentences = await Task.Run(() => GetWordsFromText(sentenceModel.Value));
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Word 1, Word 2, Word 3, Word 4, Word 5, Word 6, Word 7, Word 8");
+
+            int i = 1;
+            foreach (var sentence in sentences)
+            {
+                sb.AppendLine($"Sentence {i++}, " + string.Join(", ", sentence.Words));
+            }
+
+            return sb.ToString();
+        }
+
+        private IList<SentenceWordsDto> GetWordsFromText(string input)
         {
             if (input is null)
             {
                 throw new ArgumentNullException();
             }
 
-            string trimInput = input.Trim();
-            string[] words = System.Text.RegularExpressions.Regex.Split(trimInput, @"\s{1,}");
-            Array.Sort(words);
+            var sentences = Regex.Split(input, @"(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|\!)\s+").Where(x => x != string.Empty);
 
-            return words;
+            string wordPattern = @"(\b[^\s]+\b)";
+
+
+            var list = new List<SentenceWordsDto>();
+
+            foreach (var sentence in sentences)
+            {
+
+                var words = Regex
+                  .Matches(sentence, wordPattern)
+                  .OfType<Match>()
+                  .Select(match => match.Value)
+                  .ToArray();
+                Array.Sort(words);
+
+                list.Add(new SentenceWordsDto
+                {
+                    Words = words.ToList()
+                });
+            }
+
+            return list;
         }
     }
 }

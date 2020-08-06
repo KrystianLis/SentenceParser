@@ -6,6 +6,7 @@ namespace API.Interfaces
     public interface ISentenceParserService
     {
         Task<int> AddSentenceAsync(SentenceDto sentenceDto);
-        Task<SentenceToWordsDto> GetWordsAsync(int id);
+        Task<string> CreateCsvAsync(int id);
+        Task<string> CreateXmlAsync(int id);
     }
 }

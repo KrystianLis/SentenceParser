@@ -17,14 +17,28 @@ namespace API.Controllers
             _service = service;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetCsv/{id}")]
+        public async Task<IActionResult> GetCsvFileAsync(int id)
+        {
+            try
+            {
+                return Ok(await _service.CreateCsvAsync(id));
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+
+        }
+
+        [HttpGet("GetXml/{id}")]
         public async Task<IActionResult> GetResultAsync(int id)
         {
             try
             {
-                return Ok(await _service.GetWordsAsync(id));
+                return Ok(await _service.CreateXmlAsync(id));
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return BadRequest();
             }
@@ -32,7 +46,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> PostAsync([FromBody] SentenceDto value)
+        public async Task<IActionResult> PostSentenceAsync([FromBody] SentenceDto value)
         {
             if(value is null)
             {
@@ -40,7 +54,7 @@ namespace API.Controllers
             }
 
             int id = await _service.AddSentenceAsync(value);
-            return CreatedAtAction(nameof(GetResultAsync), new { Id = id });
+            return Ok(new { Id = id });
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace API.Models
 {
-    public class SentenceToWordsDto
+    public class SentenceWordsDto
     {
         public IEnumerable<string> Words { get; set; }
     }
