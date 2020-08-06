@@ -1,4 +1,9 @@
+using API.Interfaces;
+using API.Services;
+using AutoMapper;
+using Domain.Interfaces;
 using Infrastructure.Data;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 namespace API
 {
@@ -23,8 +29,12 @@ namespace API
         {
             services.AddDbContext<ParserContext>(opt => opt.UseInMemoryDatabase("InMemoryDb"));
 
-            services.AddControllers()
-                .AddXmlSerializerFormatters(); ;
+            services.AddControllers();
+
+            services.AddTransient<ISentenceRepository, SentenceRepository>();
+            services.AddTransient<ISentenceParserService, SentenceParserService>();
+            
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddSwaggerGen(x =>
             {

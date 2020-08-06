@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "53Np0CoWFivU3q8T+RJoCI2e45YkaYsmW6Zce9GRM+n3BxUxieOPXqUvF/jadvXJo5NI7uGaCZC3f2N4aDY5ng==",
+  "dgSpecHash": "nsXJ/OeMwj4VThgN+tzUGkNvhnrlPFRRmG7UWYZ1yrrJP3W5c97I/MUbAbojM9hdgoxPtyI2Se7g4KydeosOtA==",
   "success": true,
   "projectFilePath": "E:\\Dev\\SentenceParser\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\liskr\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\liskr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
+    "C:\\Users\\liskr\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.6\\microsoft.entityframeworkcore.3.1.6.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.6\\microsoft.entityframeworkcore.abstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.6\\microsoft.entityframeworkcore.analyzers.3.1.6.nupkg.sha512",
@@ -29,7 +32,8 @@
     "C:\\Users\\liskr\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.5.1\\swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
-    "C:\\Users\\liskr\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    "C:\\Users\\liskr\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\liskr\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

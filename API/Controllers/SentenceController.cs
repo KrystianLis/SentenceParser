@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Threading.Tasks;
 using API.Interfaces;
+using API.Models;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace API.Controllers
 {
@@ -17,31 +17,30 @@ namespace API.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<IActionResult> GetResultAsync(int id)
         {
-            return "value";
+            try
+            {
+                return Ok(await _service.GetWordsAsync(id));
+            }
+            catch(Exception)
+            {
+                return BadRequest();
+            }
+
         }
 
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<IActionResult> PostAsync([FromBody] SentenceDto value)
         {
-        }
+            if(value is null)
+            {
+                return BadRequest();
+            }
 
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            int id = await _service.AddSentenceAsync(value);
+            return CreatedAtAction(nameof(GetResultAsync), new { Id = id });
         }
     }
 }

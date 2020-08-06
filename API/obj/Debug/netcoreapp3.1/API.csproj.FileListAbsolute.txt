@@ -54,9 +54,6 @@ E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.AssemblyInfo.cs
 E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.RazorTargetAssemblyInfo.cache
 E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.dll
 E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.pdb
-E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.csproj.CoreCompileInputs.cache
-E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cs
-E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cache
 E:\Dev\SentenceParser\API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\Dev\SentenceParser\API\bin\Debug\netcoreapp3.1\appsettings.json
 E:\Dev\SentenceParser\API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -72,3 +69,8 @@ E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.csproj.CopyComplete
 E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\staticwebassets\API.StaticWebAssets.Manifest.cache
 E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\staticwebassets\API.StaticWebAssets.xml
 E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache
+E:\Dev\SentenceParser\API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+E:\Dev\SentenceParser\API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.csproj.CoreCompileInputs.cache
+E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cs
+E:\Dev\SentenceParser\API\obj\Debug\netcoreapp3.1\API.MvcApplicationPartsAssemblyInfo.cache

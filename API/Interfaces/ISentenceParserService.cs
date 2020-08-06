@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using API.Models;
+using System.Threading.Tasks;
 
 namespace API.Interfaces
 {
     public interface ISentenceParserService
     {
-        IEnumerable<string> GetWordsFromText(string input);
+        Task<int> AddSentenceAsync(SentenceDto sentenceDto);
+        Task<SentenceToWordsDto> GetWordsAsync(int id);
     }
 }
