@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nsXJ/OeMwj4VThgN+tzUGkNvhnrlPFRRmG7UWYZ1yrrJP3W5c97I/MUbAbojM9hdgoxPtyI2Se7g4KydeosOtA==",
+  "dgSpecHash": "9c6tIalU1Je+flYb0CMjiTJ/7qN2/Ui931tjdS63XTOYB5oY1p/hoXO0R4xhT0qQGqsxNQCzwmpnYsRkgmJmGA==",
   "success": true,
   "projectFilePath": "E:\\Dev\\SentenceParser\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -33,7 +33,9 @@
     "C:\\Users\\liskr\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\liskr\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
-    "C:\\Users\\liskr\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+    "C:\\Users\\liskr\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\liskr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512",
+    "C:\\Users\\liskr\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.2\\microsoft.netcore.app.host.win-x64.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
