@@ -1,3 +1,4 @@
+import { SentenceGetResponse } from './models/sentence-get-response';
 import { SentenceService } from './services/sentence.service';
 import { Component } from '@angular/core';
 
@@ -8,11 +9,25 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
-  constructor(private sentenceService:SentenceService){
-    
-  }
 
-  OnSentencePost():void{
-    this.sentenceService.PostSentenceAsync({Value:'dadas dsadsad dsooogkaaaa'}).subscribe(reponse => console.log(reponse));
+  result:SentenceGetResponse={ value:'' };
+  inputValue:string;
+
+  constructor(private sentenceService:SentenceService){}
+
+  OnPostGetXmlAsync():void{
+    this.sentenceService.postSentenceAsync({Value:this.inputValue}).subscribe((response) => {
+        this.sentenceService.getXmlAsync(response).subscribe(response => {
+        this.result.value = response.value
+      }, error => console.log(error))
+    });
   }  
+
+  OnPostGetCsvAsync():void{
+    this.sentenceService.postSentenceAsync({Value:this.inputValue}).subscribe((response) => {
+        this.sentenceService.getCsvAsync(response).subscribe(response => {
+        this.result.value = response.value
+      }, error => console.log(error));
+    });
+  } 
 }

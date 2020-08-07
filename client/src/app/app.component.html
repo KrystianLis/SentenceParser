@@ -1,3 +1,23 @@
+<app-nav-bar></app-nav-bar>
+
 <div>
-  <button (click) = 'OnSentencePost()'>klikaj mnie</button>
+  <div class="d-flex justify-content-center">
+    <div class="form-row">
+      <div class="form-group m-5">
+        <label for="exampleFormControlTextarea1">Input</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="20" cols="70" [(ngModel)]="inputValue"></textarea>
+      </div>
+      <div class="form-group m-5">
+        <label for="exampleFormControlTextarea2">Output</label>
+        <textarea class="form-control output" id="exampleFormControlTextarea2" rows="20" cols="70" wrap="" [ngModel]="result?.value"></textarea>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button (click) = 'OnPostGetXmlAsync()' type="button" class="btn btn-primary btn-lg m-2">Convert to XML</button>
+    <button (click) = 'OnPostGetCsvAsync()' type="button" class="btn btn-success btn-lg m-2">Convert to CSV</button>
+  </div>
 </div>
+

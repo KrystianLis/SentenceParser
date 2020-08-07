@@ -32,7 +32,7 @@ namespace API.Services
             return sentence.Id;
         }
 
-        public async Task<string> CreateXmlAsync(int id)
+        public async Task<SentenceDto> CreateXmlAsync(int id)
         {
             var sentenceModel = await _repo.GetAsync(id);
 
@@ -58,10 +58,15 @@ namespace API.Services
             var wr = new StringWriter();
             doc.Save(wr);
 
-            return wr.ToString();
+            wr.ToString();
+
+            return new SentenceDto
+            {
+                Value = wr.ToString()
+            };
         }
 
-        public async Task<string> CreateCsvAsync(int id)
+        public async Task<SentenceDto> CreateCsvAsync(int id)
         {
             var sentenceModel = await _repo.GetAsync(id);
 
@@ -81,7 +86,10 @@ namespace API.Services
                 sb.AppendLine($"Sentence {i++}, " + string.Join(", ", sentence.Words));
             }
 
-            return sb.ToString();
+            return new SentenceDto
+            {
+                Value = sb.ToString()
+            };
         }
 
         private IList<SentenceWordsDto> GetWordsFromText(string input)
@@ -94,7 +102,6 @@ namespace API.Services
             var sentences = Regex.Split(input, @"(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?|\!)\s+").Where(x => x != string.Empty);
 
             string wordPattern = @"(\b[^\s]+\b)";
-
 
             var list = new List<SentenceWordsDto>();
 
