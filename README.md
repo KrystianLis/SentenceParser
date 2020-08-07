@@ -1,8 +1,8 @@
-# How to run
+# How to run Sentence Parser
 
 ## BackEnd
 
-Go to to API projec and run `dotnet run` for a api server.
+Go to to API project and run `dotnet run` for a api server.
 
 ## Frontend
 
