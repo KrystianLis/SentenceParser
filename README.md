@@ -1,8 +1,6 @@
 # Technologies
 
-.NET Core 3.1
-ASP .NET Core 3.1
-Angular 10
+.NET Core 3.1, ASP .NET Core 3.1, Angular 10
 
 # How to run Sentence Parser
 
