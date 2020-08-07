@@ -1,8 +1,14 @@
+# Technologies
+
+.NET Core 3.1
+ASP .NET Core 3.1
+Angular 10
+
 # How to run Sentence Parser
 
 ## BackEnd
 
-Go to to API project and run `dotnet run` for a api server.
+Go to to API project and run `dotnet buil` and `dotnet run` for a api server.
 
 ## Frontend
 
