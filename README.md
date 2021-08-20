@@ -6,7 +6,7 @@
 
 ## BackEnd
 
-Go to to API project and run `dotnet build` and `dotnet run` for the API server.
+Go to to API project and run `dotnet build` and `dotnet run`.
 
 ## Frontend
 
